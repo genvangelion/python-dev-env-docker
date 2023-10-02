@@ -7,8 +7,8 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python
 RUN pip install virtualenv
 
 # You may need to change this to YOUR gid and uid. The following is a common setup.
-#RUN adduser --disabled-password --gecos '' --uid 1000 --gid 1000 app
-RUN adduser --disabled-password --gecos '' --uid 1000 --gid 100 app
+RUN adduser --disabled-password --gecos '' --uid 1000 --gid 1000 app
+#RUN adduser --disabled-password --gecos '' --uid 1000 --gid 100 app
 
 RUN chsh -s /usr/bin/zsh app
 
