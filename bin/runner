@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+
+python -m venv /work/.venv
+
+source /work/.venv/bin/activate
+
+echo "Python installation:"
+echo $(which python)
+
+pip install --no-cache-dir -r requirements.txt
+
+cd /work/
+
+#Execute the final command to begin your workload
+#python -u init.py
+
+#If you just want a container you can code in and run commands from, this will run the container in forever sleep 
+#Or you want it to forever sleep temporarily while you debug something so you can use bin/cli 
+python -u sleep.py

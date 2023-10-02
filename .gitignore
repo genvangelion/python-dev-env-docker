@@ -1,0 +1,12 @@
+*.swp
+*.swa
+db.sqlite3
+venv
+.venv
+cookies.sqlite
+test.py
+*.pkl
+**/__pycache__/
+
+keithhanson/
+cookies

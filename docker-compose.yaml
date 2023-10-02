@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    # This will automatically build and run the Dockerfile located in this directory
+    build: .
+
+    # This will map THIS directory into the /work folder for you
+    # This lets you make edits to these files and they will be immediately updated in the container
+    volumes:
+      - "./:/work"
+
+    # Open ports with the following: localPort:containerPort
+    #ports:
+    #  - "8000:8000"
