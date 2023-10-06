@@ -17,4 +17,13 @@ cd /work/
 
 #If you just want a container you can code in and run commands from, this will run the container in forever sleep 
 #Or you want it to forever sleep temporarily while you debug something so you can use bin/cli 
-python -u sleep.py
+# python -u sleep.py
+
+# Config Jupyter Notebook Server to allow any origin
+jupyter notebook --generate-config
+echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.disable_check_xsrf = True" >> ~/.jupyter/jupyter_notebook_config.py
+
+# Start the Jupyter Notebook Server
+echo "Starting Jupyter Notebook Server"
+jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser --allow-root

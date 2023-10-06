@@ -9,7 +9,8 @@ services:
     # This lets you make edits to these files and they will be immediately updated in the container
     volumes:
       - "./:/work"
+      - "/home/genesis/data/:/data"
 
     # Open ports with the following: localPort:containerPort
-    #ports:
-    #  - "8000:8000"
+    ports:
+      - "8888:8888"
