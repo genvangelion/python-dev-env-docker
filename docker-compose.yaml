@@ -9,7 +9,7 @@ services:
     # This lets you make edits to these files and they will be immediately updated in the container
     volumes:
       - "./:/work"
-      - "/home/genesis/data/:/data"
+      - "/home/genesis/tealbot/data/:/data"
 
     # Open ports with the following: localPort:containerPort
     ports:
