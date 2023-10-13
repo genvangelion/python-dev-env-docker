@@ -1,12 +1,10 @@
-FROM python:3.9
+FROM python:3.10.12
 
 RUN apt update
 RUN apt install sqlite3 sudo vim tig htop zsh wget curl -y
 
 RUN curl https://bootstrap.pypa.io/get-pip.py | python
 RUN pip install virtualenv
-
-RUN pip install jupyter
 
 # You may need to change this to YOUR gid and uid. The following is a common setup.
 #RUN adduser --disabled-password --gecos '' --uid 1003 --gid 1000 app

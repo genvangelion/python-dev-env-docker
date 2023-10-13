@@ -4,3 +4,9 @@ django
 streamlit
 pandas
 dask
+dask[distributed]
+tqdm
+jupyter
+lz4
+msgpack==1.0.6
+graphviz
